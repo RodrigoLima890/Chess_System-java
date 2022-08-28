@@ -36,9 +36,9 @@ public class Board {
 		return pieces[position.getRow()][position.getColumn()];
 	}
 	
-	public void placePiece(Piece piece, Position position) {//vai na matriz de peças e atribuir a posição a peça que virá como argumento
+	public void placePiece(Piece piece, Position position) {//vai na matriz de peï¿½as e atribuir a posiï¿½ï¿½o a peï¿½a que virï¿½ como argumento
 		if(thereIsAPiece(position)) {
-			throw new BoardException("There is already a piece on position" + position);
+			throw new BoardException("There is already a piece on position " + position);
 		}
 		pieces[position.getRow()][position.getColumn()] = piece;
 		piece.position = position;
