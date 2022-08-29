@@ -56,4 +56,16 @@ public class Board {
 		}
 		return piece(position) != null;
 	}
+	public Piece removePiece(Position position){
+		if(!positionExists(position)){
+			return null;
+		}
+		if(piece(position)==null){
+			return null;
+		}
+		Piece aux = piece(position);
+		aux.position = null;
+		pieces[position.getColumn()][position.getRow()] = null;
+		return aux;
+	}
 }
