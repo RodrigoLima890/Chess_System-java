@@ -28,8 +28,8 @@ public class ChessMatch {
 		Position source = sourcePosition.toPosition();
 		Position target = targetPosition.toPosition();
 		validSourcePosition(source);
-		Piece capturePiece = makeMove(source, target);
-		return (ChessPiece)capturePiece;
+		Piece capturedPiece = makeMove(source, target);
+		return (ChessPiece)capturedPiece;
 	}
 	private Piece makeMove(Position source, Position target){
 		Piece p = board.removePiece(source);
